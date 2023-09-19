@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FindMeAnImage</title>
+  <style>
+    h1, h3 {
+    text-align: center;
+    }
+    .containera {
+    max-width: 600px;  
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    }
+    form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    form input,
+    form button {
+    margin: 12px;
+    }
+    form button {
+      background: rgb(44, 207, 131);
+      color: black;
+    }
+    .container {
+    /* margin-top: 35px; */
+    margin: 20px auto;
+    text-align: center;
+    }
+    body {
+      background-color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+<div class="containera">
+
+  <h1>Find Me An Image</h1> 
+  <h3>An Image Search Application by Garvit Kulshrestha</h3>
+  <hr>
+  <form action="/" method="POST">
+    <label for="photo_category">I want photos of:</label>
+    <input type="text" name="photo_category" required>
+    <button type="submit">Get Images</button>
+  </form>
+
+
+</div>
+
+  <div class="container">
+    {% if image_urls %}
+      {% for image_url in image_urls %}
+        <img src="{{ image_url }}" alt="Image">
+      {% endfor %}
+    {% else %}
+    {% endif %}
+  </div>
+</body>
+</html>
