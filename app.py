@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 def get_pexels_photos(photo_category):
-    headers = {"Authorization": "Your API-Key"}
+    headers = {"Authorization": "563492ad6f91700001000001723b6a32d0eb450690f61b3f2fa9e746"}
     response = requests.get("https://api.pexels.com/v1/search?query={}&per_page=12".format(photo_category), headers=headers)
     if response.status_code == 200:
         return response.json()["photos"]       
