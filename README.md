@@ -19,7 +19,7 @@ My Docker Image for this Project is available here <br />
 https://hub.docker.com/repository/docker/garvitkulshrestha/FindMeAnImage_garvit <br />
 
 You can create a container directly from image. Command to do so is - <br />
-sudo docker run -i -t --name FindMeAnImage_garvit -p 5000:5000 garvitkulshrestha/FindMeAnImage_garvit <br />
+sudo docker run -i -t --name FindMeAnImage_garvit -p 5000:5000 garvitkulshrestha/findmeanimage_garvit <br />
 
 # Create container from Dockerfile
 
@@ -37,7 +37,7 @@ sudo docker run -i -t --name FindMeAnImage_garvit -p 5000:5000 garvitkulshrestha
 
 When your container is ready, you can go into your container. <br />
 Now, you need to follow the below commands <br />
-cd FindMeAnImage
-Python3 app.py
+cd FindMeAnImage <br>
+python3 app.py
 
 Now, your application is running on port 5000. If your Host Machine has a public IP then you can browse your page at PublicIP:5000 otherwise you can browse it on localhost:5000 as well.
